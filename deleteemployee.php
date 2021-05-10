@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Update Employee</title>
+<title>Delete Employee</title>
 </head>
 
 <body>
-	<h2>Updated Employee Record</h2>
+	<h2>Delete Employee Record</h2>
 	<br><br>
 	<?php
 		echo "<h3>PHP Code Generates This:</h3>";
@@ -47,7 +47,7 @@
 	
 		if ($conn->query($sql) === TRUE){
 			
-			echo "Deleted Employee record for ". $empno . "Successfully";
+			echo "Deleted Employee record for ". $empno . " Successfully";
 			
 		} else {
 		
@@ -59,5 +59,7 @@
 		$conn->close();
 		
 	?>
+	<br><br>
+<a href="index.html" title="Home" target="_parent">Home</a>	
 </body>
 </html>

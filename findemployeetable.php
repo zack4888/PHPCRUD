@@ -72,5 +72,7 @@
 		$conn->close();
 		
 	?>
+	<br><br>
+<a href="index.html" title="Home" target="_parent">Home</a>	
 </body>
 </html>

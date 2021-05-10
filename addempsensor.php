@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Update Employee</title>
+<title>Add Employee/Sensor Record</title>
 </head>
 
 <body>
-	<h2>Updated Employee Record</h2>
+	<h2>Add an Employee/Sensor Record</h2>
 	<br><br>
 	<?php
 		echo "<h3>PHP Code Generates This:</h3>";
@@ -27,13 +27,10 @@
 		echo "MySQL Connection Succeeded<br><br>";
 		
 		//pull the attribute that was passed with the html form GET request and put into a local variable.
-		$lastname = $_GET["lastname"];
-		$firstname = $_GET["firstname"];
-        $empno = $_GET["emp_no"];
-        $hiredate = $_GET["hiredate"];
-        $birthdate = $_GET["birthdate"];
-        $gender = $_GET["gender"];
-		echo "Updating record for: " . $firstname . " " . $lastname;
+		$number = $_GET["number"];
+		$empno = $_GET["empno"];
+		
+		echo "Adding record for sensor number: " . $number;
 	
 		echo "<br><br>";
 		
@@ -41,13 +38,13 @@
 		//based on using the GET attribute
 		//this statement needs to be variablized to put in the data passed from the form
 		//right now it is hardcoded.
-		$sql = "UPDATE employees SET first_name = '$firstname', last_name = '$lastname', hire_date = '$hiredate', gender = '$gender', birth_date = '$birthdate' where emp_no = $empno";
-		
+		$sql = "INSERT INTO emp_sensor (sensor_no, emp_no) VALUES
+		($number, '$empno')";
 	
 	
 		if ($conn->query($sql) === TRUE){
 			
-			echo "Update Employee information Successfull";
+			echo "New Sensor Created Successfully";
 			
 		} else {
 		

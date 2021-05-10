@@ -27,8 +27,14 @@
 		echo "MySQL Connection Succeeded<br><br>";
 		
 		//pull the attribute that was passed with the html form GET request and put into a local variable.
+	
 		$lastname = $_GET["lastname"];
 		$firstname = $_GET["firstname"];
+		$birthdate = $_GET["birthdate"];
+		$empno = $_GET["number"];
+		$hiredate = $_GET["hiredate"];
+		$gender = $_GET["gender"];
+	
 		echo "Adding record for: " . $firstname . " " . $lastname;
 	
 		echo "<br><br>";
@@ -38,7 +44,7 @@
 		//this statement needs to be variablized to put in the data passed from the form
 		//right now it is hardcoded.
 		$sql = "INSERT INTO employees (emp_no, birth_date, first_name, last_name, gender, hire_date) VALUES
-		(500000, 05-30-1969, 'Josephine', 'Weedman', 'F', '05-30-1999')";
+		('$empno', '$birthdate', '$firstname', '$lastname', '$gender', '$hiredate')";
 	
 	
 		if ($conn->query($sql) === TRUE){
@@ -55,5 +61,7 @@
 		$conn->close();
 		
 	?>
+	<br><br>
+<a href="index.html" title="Home" target="_parent">Home</a>	
 </body>
 </html>

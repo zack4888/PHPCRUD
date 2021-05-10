@@ -6,8 +6,12 @@
 </head>
 
 <body>
-	<h2>Find an Employee Record</h2>
+	<h2>Update an Employee Record</h2>
 	<hr>
+	<p>Please edit any information that needs to be updated</p>
+	<p>Please leave all other information alone</p>
+	<p>If you need to change an empoyee ID number please delete them from the system</p>
+	<p>Then make a new entry with their new ID number </p>
 	<?php
 		echo "<h3>PHP Code Generates This:</h3>";
 		
@@ -48,6 +52,7 @@
             echo "<form action=\"updateemployee2.php\">";
             while($row = $result->fetch_assoc()){
                 echo "Employee Number: " . $row["emp_no"]. "<br><br>";
+				echo "<input type=\"hidden\" name=\"emp_no\" value=" . $row["emp_no"].">";
 				echo "First name: <input type=\"text\" name=\"firstname\" value=" . $row["first_name"]. "><br><br>";
                 echo "Last name: <input type=\"text\" name=\"lastname\" value=" . $row["last_name"]. "><br><br>";
                 echo "Hire Date: <input type=\"text\" name=\"hiredate\" value=" . $row["hire_date"]. "><br><br>";
@@ -67,5 +72,7 @@
 		$conn->close();
 		
 	?>
+	<br><br>
+<a href="index.html" title="Home" target="_parent">Home</a>	
 </body>
 </html>

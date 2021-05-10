@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add Sensor Record</title>
+</head>
+
+<body>
+<h2>Add a Sensor Record</h2>
+<p>This will add a record to the sensor table in the MySQL Database</p>
+<!-- here is the start of the form -->
+<form action="addsensor.php">
+  Sensor Number:     
+  <input type="text" name="number" value="">
+  <br><br>
+  Type of sensor:
+  <input type="text" name="type" value="">
+  <br><br>
+  sensor status(0 = online 1 = offline 2 = fault):
+  <input type="text" name="status" value="0">
+  <br><br>
+  Location of the sensor:
+  <input type="text" name="location" value="">
+  <br><br>
+  Date installed:
+  <input type="text" name="date" value="5-6-2021">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+<a href="index.html" title="Home" target="_parent">Home</a>	
+</body>
+</html>

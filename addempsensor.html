@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add Employee/Sensor Record</title>
+</head>
+
+<body>
+<h2>Add a Employee/Sensor Record</h2>
+<p>This will add a record to the Employee/sensor table in the MySQL Database</p>
+<p>This table associates a sensor with the employee responsible for upkeep on the sensor.</p>
+<!-- here is the start of the form -->
+<form action="addempsensor.php">
+  Sensor Number:     
+  <input type="text" name="number" value="1004">
+  <br><br>
+  Employee number:
+  <input type="text" name="empno" value="10001">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+<a href="index.html" title="Home" target="_parent">Home</a>	
+</body>
+</html>
