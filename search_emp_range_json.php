@@ -1,13 +1,14 @@
 <?php
+	include "creds.php";
 	// required headers
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: application/json; charset=UTF-8");
 	//some variables
-	$servername = "localhost";  //mysql is on the same host as apache
+	//$servername = "localhost";  //mysql is on the same host as apache
 	//$username = "<put your db username here>";    //username for database
-        $username = "zack";
+        //$username = "zack";
 	//$password = "<put your db password here>";	//pasword for the user
-	$password = "zack";
+	//$password = "zack";
 	$dbname = "employees";  	//which db you're going to use
 	
 	//this is the php object oriented style of creating a mysql connection

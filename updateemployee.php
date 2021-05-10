@@ -13,12 +13,13 @@
 	<p>If you need to change an empoyee ID number please delete them from the system</p>
 	<p>Then make a new entry with their new ID number </p>
 	<?php
+		include "creds.php";
 		echo "<h3>PHP Code Generates This:</h3>";
 		
 		//some variables
-		$servername = "localhost";  //mysql is on the same host as apache (not realistic) this would more likely be an IP address
-		$username = "zack";    //username for database
-		$password = "zack";		//password for the user
+		//$servername = "localhost";  //mysql is on the same host as apache (not realistic) this would more likely be an IP address
+		//$username = "zack";    //username for database
+		//$password = "zack";		//password for the user
 		$dbname = "employees";  	//which db you're going to use
 	
 		//this is the php object oriented style of creating a mysql connection

@@ -9,12 +9,13 @@
 	<h2>Delete Employee Record</h2>
 	<br><br>
 	<?php
+		include "creds.php";
 		echo "<h3>PHP Code Generates This:</h3>";
 		
 		//some variables
-		$servername = "localhost";  //mysql is on the same host as apache (not realistic but whatevs)
-		$username = "zack";    //username for database
-		$password = "zack";		//password for the user
+		//$servername = "localhost";  //mysql is on the same host as apache (not realistic but whatevs)
+		//$username = "zack";    //username for database
+		//$password = "zack";		//password for the user
 		$dbname = "employees";  	//which db you're going to use
 	
 		//this is the php object oriented style of creating a mysql connection
